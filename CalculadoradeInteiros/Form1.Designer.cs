@@ -43,7 +43,7 @@
             btn_Multiplicacao = new Button();
             btn_Igual = new Button();
             btn_Divisao = new Button();
-            textBox1 = new TextBox();
+            display = new TextBox();
             SuspendLayout();
             // 
             // btn_1
@@ -197,19 +197,20 @@
             btn_Divisao.UseVisualStyleBackColor = true;
             btn_Divisao.Click += btn_Divisao_Click;
             // 
-            // textBox1
+            // display
             // 
-            textBox1.Location = new Point(99, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(591, 31);
-            textBox1.TabIndex = 15;
+            display.Location = new Point(99, 70);
+            display.Name = "display";
+            display.Size = new Size(591, 31);
+            display.TabIndex = 15;
+            display.TextChanged += Display_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(display);
             Controls.Add(btn_Divisao);
             Controls.Add(btn_Igual);
             Controls.Add(btn_Multiplicacao);
@@ -249,6 +250,6 @@
         private Button btn_Multiplicacao;
         private Button btn_Igual;
         private Button btn_Divisao;
-        private TextBox textBox1;
+        private TextBox display;
     }
 }
